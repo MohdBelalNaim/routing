@@ -1,16 +1,32 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Navbar from './Header'
+import myimage from './myimage.jpg'
+
 
 function Body() {
+  
+
+  const a  = 100
+  
+  // //single type variable
+  // int a = 10;
+  
+  const[val,setVal] = useState("ssss")
+
   return (
     <>
     <section>
-        <div class="container border py-5 text-center rounded mt-5 h2">
-            <div class="py-5">
-                This is the body of page
-            </div>
-        </div>
+        
+      
+
+        <input type="text" value={val} onChange={(b)=>setVal(b.target.value)}/>
+
     </section>
+
+
+    <script>
+      increase()
+    </script>
     </>
     
   )
