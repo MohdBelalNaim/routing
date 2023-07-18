@@ -1,32 +1,33 @@
 import React,{useState} from 'react'
-import Navbar from './Header'
-import myimage from './myimage.jpg'
+
 
 
 function Body() {
   
+  const [val,setVal] = useState("ss")
+  const a = 100
 
-  const a  = 100
-  
-  // //single type variable
-  // int a = 10;
-  
-  const[val,setVal] = useState("ssss")
+
+  function show(){
+    console.log(val)
+  }
+
+
+
+
 
   return (
     <>
     <section>
-        
-      
-
-        <input type="text" value={val} onChange={(b)=>setVal(b.target.value)}/>
-
+        <input type="text" value={val} /> 
+        <hr />
     </section>
 
+    <div>
+      <button onClick={()=>show()}>Click here</button>
+    </div>
 
-    <script>
-      increase()
-    </script>
+    
     </>
     
   )
